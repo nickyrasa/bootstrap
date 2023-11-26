@@ -1,0 +1,133 @@
+:root {
+    --primary-color: rgb(2, 2, 117);
+    --secondary-color: white;
+    --spacing: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    color: black;
+}
+
+main {
+    margin-top: var(--spacing);
+}
+
+nav, footer {
+    background-color: var(--primary-color);
+    height: calc(var(--spacing)*4);
+}
+
+nav, .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    padding: var(--spacing);
+}
+
+.nav-link {
+    color: var(--secondary-color);
+}
+
+#navbar-list ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--secondary-color);
+}
+
+#navbar-list ul li {
+    list-style: none;
+    height: auto;
+    padding: var(--spacing);
+}
+
+ul.dropdown-menu {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+ul.dropdown-menu {
+    --bs-dropdown-min-width: 5rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: calc(var(--spacing)*2);
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;    
+    width: 100%;
+}
+
+.component {
+    width: 15rem;
+    height: 23rem;
+    display: grid;
+    grid-template-rows: 3fr 1fr 2fr 1fr;
+    padding: var(--spacing);
+    margin: var(--spacing);
+}
+
+.component img {
+    max-width: 13rem;
+    max-height: auto;
+}
+
+.component h2 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.component button {
+    background-color: var(--primary-color);
+    border-radius: 5%;
+    width: 60%;
+    margin: auto;
+}
+
+#bottom {
+    background-color: rgb(236, 230, 230);
+    height: calc(var(--spacing)*6);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .nodisplayp {
+        display: none;
+    }
+
+    .component {
+        /* width: 15rem; */
+        height: 18rem;
+        display: grid;
+        grid-template-rows: 3fr 1fr 0fr 1fr;
+        box-shadow: 5px 5px 5px 5px black;
+        padding: calc(var(--spacing)/2);
+        margin: calc(var(--spacing)/2);
+    }
+}
